@@ -22,10 +22,17 @@ req = requests.get(url = 'http://lit-inlet-3610.herokuapp.com/api/routes/active/
 #print req
 req = req.json()
 
+#print req
+
+time = requests.get(url = 'http://lit-inlet-3610.herokuapp.com/api/stops/near/36.866978/-76.307433/')
+
+time = time.json()
+
+#print time
 
 #while req 
-for item in req:
-	print item.viewitems
+#for route in req:
+ 	#print route["route_long_name"]
 #i = iter(req)
 #print i.next()
 #print i.next()
@@ -33,8 +40,8 @@ for item in req:
 #print req
 #print req[0].long_route_names
 
-#message = client.messages.create(to="+13473993732", from_="+17573374787",
-#                                 body="Hello there!")
+message = client.messages.create(to="+13473993732", from_="+17573374787",
+                                 body="The requested bus has departed, if you require another reply MORE ")
 
 #if __name__ == "__main__":
  #   app.run()
